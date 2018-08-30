@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only menuToggle>MTL Compass
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
+
+  <ion-slide>
+    <ion-grid>
+      <ion-row left justify-content-start>
+        <ion-col col-md-1>
+            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
+            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+        </ion-col>
+      </ion-row>
+        <ion-row left justify-content-start>
+          <ion-col col-sm-9>
+              <h4 text-left id="doYouHaveAPlaceToStay-heading23" style="color:#000000;" class="padding">Do you have a question? I can help find the answer or you connect to the right organization.</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row left justify-content-start>
+          <ion-col col-md-1>
+            <button id="doYouHaveAPlaceToStay-next" (click)="slide()"  ion-button round item-end>
+              I have a question
+            </button>
+          </ion-col>
+        </ion-row>
+  </ion-grid>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-grid>
+      <ion-row left justify-content-start>
+        <ion-col col-md-1>
+            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
+            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+        </ion-col>
+      </ion-row>
+      <ion-row left justify-content-start>
+    <ion-col col-sm-9>
+        <h4 text-left id="medical" style="color:#000000;" class="padding">What can I help you with?</h4>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <form (ngSubmit)="sendEmail()">
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-input type="text" [(ngModel)]="emailAddr" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Question</ion-label>
+          <ion-textarea placeholder="How can I enroll my children in school?" [(ngModel)]="question" name="question"></ion-textarea>
+        </ion-item>
+        <button ion-button type="submit" block>Ask Question</button>
+      </form>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  </ion-slide>
+
+</ion-slides>
+</ion-content>

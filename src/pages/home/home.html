@@ -1,0 +1,29 @@
+<ion-header>
+  <!--<ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>-->
+</ion-header>
+
+<ion-content padding class="vertical-align-content" text-center>
+  <ion-grid>
+          <ion-row align-items-center>
+            <ion-col col-sm-3 offset-3>
+                <h4 text-left id="home-heading23" style="color:#000000;" class="padding">{{greeting}}! What can I help you with?</h4>
+            </ion-col>
+          </ion-row>
+          <ion-row align-items-center justify-content-center>
+            <ion-col col-sm-3 align-self-center justify-content-center>
+              <button id="home-place" (click)="doYouHaveAPlaceToStay()"  ion-button round item-end>
+                I need place to stay
+              </button>
+              <button id="home-next" (click)="openMenu()"  ion-button round item-end>
+                Something else
+              </button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+</ion-content>

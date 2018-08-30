@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only menuToggle>MTL Compass
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
+  <ion-slide>
+    <ion-grid>
+      <ion-row left justify-content-start>
+        <ion-col col-md-1>
+            <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
+            <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+        </ion-col>
+      </ion-row>
+        <ion-row left justify-content-start>
+          <ion-col col-sm-9>
+              <h4 text-left id="applyForWorkPermit-heading23" style="color:#000000;" class="padding">Have you applied for financial assistance (welfare)?</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row left justify-content-start>
+          <ion-col col-md-1>
+            <button id="applyForWorkPermit-next" (click)="applyForWorkPermit()"  ion-button round item-end>
+              Yes
+            </button>
+          </ion-col>
+          <ion-col col-md-1>
+            <button id="applyForWorkPermit-next" (click)="slide()"  ion-button round item-end>
+              No
+            </button>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  </ion-slide>
+
+
+
+  <ion-slide>
+    <ion-grid>
+      <ion-row left justify-content-start>
+        <ion-col col-md-1>
+            <button *ngIf="backView == true" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
+        </ion-col>
+      </ion-row>
+      <ion-row left justify-content-start>
+        <ion-col col-sm-9>
+            <h4 text-left id="medical" style="color:#000000;" class="padding">As a newcomer you may recieve social assistance if you meet eligibility criteria similar to those of residents.</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+              <button id="applyForWorkPermit-button61" (click)="reDirect()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >More Information</button>
+        </ion-col>
+        <ion-col>
+              <button id="applyForWorkPermit-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Submit</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+
+
+  <ion-slide>
+    <ion-grid>
+      <ion-row left justify-content-start>
+        <ion-col col-md-1>
+            <button *ngIf="backView == true" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
+        </ion-col>
+      </ion-row>
+      <ion-row left justify-content-start>
+        <ion-col col-sm-9>
+            <h4 text-left id="medical" style="color:#000000;" class="padding">Once you've completed the welfare form, you must submit it to:</h4>
+            <p>Centre Specialise Des Demandeurs D'asile (CSDA):<br/>
+              <strong>1004 St-Antoine Street West (Metro Bonaventure)</strong>
+            </p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+              <button id="applyForWorkPermit-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Call</button>
+        </ion-col>
+        <ion-col>
+              <button id="applyForWorkPermit-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Map</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+
+
+
+
+
+</ion-slides>
+</ion-content>

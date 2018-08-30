@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only menuToggle>MTL Compass
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <ion-grid>
+        <ion-row left justify-content-start>
+          <ion-col col-md-1>
+              <button id="shelterForWomen-button59" (click)="doYouHaveAPlaceToStay()"   ion-button color="blue" clear item-end left> Back</button>
+          </ion-col>
+        </ion-row>
+          <ion-row left justify-content-start>
+            <ion-col col-sm-9>
+                <h4 text-left id="shelterForWomen-heading23" style="color:#000000;" class="padding">Accomdation for women:</h4>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+                  <ion-select [(ngModel)]="selectedOpt" interface=popover placeholder="Select Organization" (ionChange)="organizationOpt($event)">
+                    <ion-option *ngFor="let org of organization" >{{org.label}}</ion-option>
+                </ion-select>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+                <button id="shelterForWomen-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Call</button>
+
+
+                <button id="shelterForWomen-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Map</button>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+    </ion-slide>
+
+
+</ion-slides>
+
+</ion-content>

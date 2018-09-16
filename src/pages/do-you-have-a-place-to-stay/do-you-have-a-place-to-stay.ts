@@ -4,6 +4,7 @@ import { Slides } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
+import { ImmigrationMedicalExamPage } from '../immigration-medical-exam/immigration-medical-exam';
 import { ShelterForWomenPage } from '../shelter-for-women/shelter-for-women';
 import { ShelterForWomenAndChildPage } from '../shelter-for-women-and-child/shelter-for-women-and-child';
 import { ShelterForEveryonePage } from '../shelter-for-everyone/shelter-for-everyone';
@@ -79,7 +80,7 @@ export class DoYouHaveAPlaceToStayPage {
   }
 
   immmigrationMedicalExam(){
-    console.log("This will push navigation control to immmigrationMedicalExam component");
+    this.navCtrl.push(ImmigrationMedicalExamPage);
   }
 
   shelterForWomen(){

@@ -10,8 +10,6 @@ import { IHaveAQuestionPage } from '../pages/i-have-a-question/i-have-a-question
 import { ImmigrationMedicalExamPage } from '../pages/immigration-medical-exam/immigration-medical-exam';
 import { LastResortAssistancePage } from '../pages/last-resort-assistance/last-resort-assistance';
 import { ShelterForEveryonePage } from '../pages/shelter-for-everyone/shelter-for-everyone';
-import { ShelterForWomenPage } from '../pages/shelter-for-women/shelter-for-women';
-import { ShelterForWomenAndChildPage } from '../pages/shelter-for-women-and-child/shelter-for-women-and-child';
 import { DoYouHaveAPlaceToStayPage } from '../pages/do-you-have-a-place-to-stay/do-you-have-a-place-to-stay';
 
 @Component({
@@ -20,7 +18,7 @@ import { DoYouHaveAPlaceToStayPage } from '../pages/do-you-have-a-place-to-stay/
 export class MyApp {
   @ViewChild(Nav) nav:Nav;
   rootPage:any = HomePage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon:string}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen ) {
     platform.ready().then(() => {

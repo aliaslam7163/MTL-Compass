@@ -22,19 +22,19 @@
     <ion-slide>
       <ion-grid>
         <ion-row left justify-content-start>
-          <ion-col col-md-1>
+          <ion-col col-sm-1 col-md-1 col-lg-3 offset-2>
               <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
               <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
           </ion-col>
         </ion-row>
           <ion-row left justify-content-start>
-            <ion-col col-sm-9>
+            <ion-col col-sm-3 offset-3 col-md-3 offset-4 col-lg-3 offset-4>
                 <h4 text-left id="doYouHaveAPlaceToStay-heading23" style="color:#000000;" class="padding">Do you have a place to stay tonight?</h4>
             </ion-col>
           </ion-row>
           <ion-row left justify-content-start>
-            <ion-col col-md-1>
-              <button id="doYouHaveAPlaceToStay-next" (click)="immigrationMedicalExam()"  ion-button round item-end>
+            <ion-col col-sm-1 col-md-1 col-lg-3 offset-3>
+              <button id="doYouHaveAPlaceToStay-next" (click)="immmigrationMedicalExam()"  ion-button round item-end>
                 Yes
               </button>
             </ion-col>

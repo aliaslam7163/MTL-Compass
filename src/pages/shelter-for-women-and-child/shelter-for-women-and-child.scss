@@ -1,3 +1,25 @@
 page-shelter-for-women-and-child {
 
 }
+
+.Absolute-Center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  height: 90%;
+
+}
+
+ion-select{
+        max-width: 90% !important;
+    }
+
+    ion-icon{
+      margin-right: 20px;
+      margin-left:0px;
+      padding-left: 0px;
+    }
+
+    ion-button{
+      margin-left:0px;
+    }

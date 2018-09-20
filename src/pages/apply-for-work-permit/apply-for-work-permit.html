@@ -1,10 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons end>
-      <button ion-button menuToggle> MTL Compass
+      <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-buttons>
+    <ion-title float-right style="text-align:right;">MTL Compass</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,130 +13,162 @@
 
 
     <ion-slide>
-      <ion-grid>
-        <ion-row left justify-content-start>
-          <ion-col col-md-1>
-                <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
-                <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+      <div class="Absolute-Center">
+        <ion-row>
+          <ion-col>
+                <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear no-padding no-margin float-left> Back</button>
+                <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left>Back</a>
           </ion-col>
         </ion-row>
-          <ion-row left justify-content-start>
-            <ion-col col-sm-9>
-                <h4 text-left id="applyForWorkPermit-heading23" style="color:#000000;" class="padding">You can apply for a work permit after you've completed your medical exam and Immigration, Refugees, and Citizenship Canada (IRCC) has received your results.</h4>
+        <ion-row>
+          <ion-col>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+          </ion-col>
+        </ion-row>
+          <ion-row>
+            <ion-col>
+                <h4 float-left id="applyForWorkPermit-heading23" style="color:#000000;text-align:left;" class="padding">You can apply for a work permit after you've completed your medical exam and Immigration, Refugees, and Citizenship Canada (IRCC) has received your results.</h4>
             </ion-col>
           </ion-row>
-          <ion-row left justify-content-start>
-            <ion-col col-md-1>
-              <button id="applyForWorkPermit-next" (click)="slide()"  ion-button round item-end>
+          <ion-row>
+            <ion-col>
+              <button id="applyForWorkPermit-next" (click)="slide()"  ion-button round float-right>
                 Next
               </button>
             </ion-col>
           </ion-row>
-      </ion-grid>
+      </div>
     </ion-slide>
 
 
 
     <ion-slide>
-      <ion-grid>
-        <ion-row left justify-content-start>
-          <ion-col col-md-1>
-            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear align-left> Back</button>
+      <div class="Absolute-Center">
+        <ion-row>
+          <ion-col>
+            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear float-left no-padding no-margin> Back</button>
           </ion-col>
         </ion-row>
-        <ion-row justify-content-center>
-          <ion-col col-md-3>
-              <h4 id="applyForWorkPermit-heading25" style="color:#000000;" >Call IRCC to ask if they have received your medical results. Then fill out work permit forms.</h4>
+        <ion-row>
+          <ion-col>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
           </ion-col>
         </ion-row>
-          <ion-row left justify-content-start>
-            <ion-col col-sm-3 offset-3>
-              <button  ion-button round item-end >
+        <ion-row>
+          <ion-col>
+              <h4 float-left id="applyForWorkPermit-heading25" style="color:#000000;text-align:left;" >Call IRCC to ask if they have received your medical results. Then fill out work permit forms.</h4>
+          </ion-col>
+        </ion-row>
+          <ion-row>
+            <ion-col>
+              <button  ion-button round float-right outline icon-left>
+                <ion-icon name="ios-call"></ion-icon>
                 Call IRCC
-              <!--  <ion-icon name="ios-call" right></ion-icon> -->
-              </button>
-              <button  id="applyForWorkPermit-button61" (click)="slide()" ion-button round item-end>
-                Prepare Forms
-              <!--  <ion-icon name="information-circle" right></ion-icon> -->
               </button>
             </ion-col>
+
           </ion-row>
-        </ion-grid>
+            <ion-row>
+              <ion-col>
+                <button  id="applyForWorkPermit-button61" (click)="slide()" ion-button round float-right  icon-left>
+                  <ion-icon name="information-circle" item-start></ion-icon>
+                    Prepare Forms
+                </button>
+            </ion-col>
+          </ion-row>
+        </div>
     </ion-slide>
 
 
 
-    <ion-slide >
-      <ion-grid>
-        <ion-row left>
-          <ion-col col-sm-1>
-            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear> Back</button>
+    <ion-slide>
+      <div class="Absolute-Center">
+        <ion-row>
+          <ion-col>
+            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left> Back</button>
           </ion-col>
         </ion-row>
-        <ion-row row center>
+        <ion-row>
+          <ion-col>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+          </ion-col>
+        </ion-row>
+        <ion-row center>
           <ion-col center>
-              <h4 id="applyForWorkPermit-heading25" style="color:#000000;text-align:center;" class="padding">You must fill out work permit forms (IMM5710 and IMM556) as well as photocopies of:</h4>
+              <h4 float-left id="applyForWorkPermit-heading25" style="color:#000000;text-align:left;" class="padding">You must fill out work permit forms (IMM5710 and IMM556) as well as photocopies of:</h4>
               <ion-list item-center>
                 <ion-item>IMM1442 immigration document</ion-item>
                 <ion-item>Date of your IRB hearing</ion-item>
                 <ion-item>Welfare slip of last welfare check</ion-item>
                 <ion-item>Passport</ion-item>
             </ion-list>
-                <button id="applyForWorkPermit-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Submit forms</button>
+                <button id="applyForWorkPermit-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left float-right outline round>
+                  <ion-icon name="ios-send-outline"></ion-icon>
+                  Submit forms
+                </button>
             </ion-col>
           </ion-row>
-        </ion-grid>
+        </div>
     </ion-slide>
 
     <ion-slide>
-      <ion-grid>
-        <ion-row left>
-          <ion-col col-sm-1>
-            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button item-end color="blue" clear> Back</button>
+      <div class="Absolute-Center">
+        <ion-row>
+          <ion-col>
+            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button float-left color="blue" clear no-padding no-margin > Back</button>
           </ion-col>
         </ion-row>
-        <ion-row row left>
-          <ion-col col-md-6 offset-3>
-            <h4 id="applyForWorkPermit-heading29" style="color:#000000;" class="padding" style="text-align:left;">It is strongly advised that you send your application online, but you can also send your completed forms and documents to Immigration, Refugees and Citizenship Canada.</h4>
-
+        <ion-row>
+          <ion-col>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h4 id="applyForWorkPermit-heading29" style="color:#000000;" class="padding" style="text-align:left;" float-left>It is strongly advised that you send your application online, but you can also send your completed forms and documents to Immigration, Refugees and Citizenship Canada.</h4>
         </ion-col>
       </ion-row>
-      <ion-row row left>
-        <ion-col col-md-1>
-          <button id="applyForWorkPermit-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Submit online</button>
+      <ion-row>
+        <ion-col>
+          <button id="applyForWorkPermit-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round float-right outline >
+            <ion-icon name="ios-send-outline"></ion-icon>
+            Submit online
+          </button>
         </ion-col>
       </ion-row>
-    </ion-grid>
+    </div>
   </ion-slide>
 
 
     <ion-slide>
-      <ion-grid>
-        <ion-row left>
-          <ion-col col-sm-1>
-            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button item-end color="blue" clear> Back</button>
+      <div class="Absolute-Center">
+        <ion-row>
+          <ion-col>
+            <button id="applyForWorkPermit-button59" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left>Back</button>
           </ion-col>
         </ion-row>
-        <ion-row row left>
-          <ion-col col-md-6 offset-3>
-            <h4 id="applyForWorkPermit-heading29" style="color:#000000;" class="padding" style="text-align:left;">Mail work permit application to:</h4>
-
+        <ion-row>
+          <ion-col>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h4 id="applyForWorkPermit-heading29" style="color:#000000;" class="padding" style="text-align:left;" float-left>Mail work permit application to:</h4><br>
+            <p style="color:#000000;font-size:14px;text-align:left;">IRCC, Case Processing Centre - Work Permit<br>
+            <strong>6212 55th Ave, Unit 55, Vegreville, AB, T9C 1X6</strong>
+          </p>
         </ion-col>
       </ion-row>
-      <ion-row row left>
-        <ion-col col-md-6 offset-3>
-          <p style="color:#000000;font-size:16px;">IRCC, Case Processing Centre - Work Permit</p>
-          <p style="color:#000000;font-size:16px;">
-          <strong>6212 55th Ave, Unit 55, Vegreville, AB, T9C 1X6</strong>
-          </p>
+    <ion-row>
+      <ion-col>
+        <button id="applyForWorkPermit-button61" (click)="reDirect()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round outline float-right >
+          <ion-icon name="ios-send-outline"></ion-icon>
+          Submit online
+        </button>
       </ion-col>
     </ion-row>
-    <ion-row row left>
-      <ion-col col-md-6 offset-3>
-        <button id="applyForWorkPermit-button61" (click)="reDirect()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Submit online</button>
-      </ion-col>
-    </ion-row>
-    </ion-grid>
+  </div>
   </ion-slide>
 
 

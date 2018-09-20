@@ -48,6 +48,7 @@ export class ShelterForEveryonePage {
     ]
 
   constructor(public navCtrl: NavController, public menuCtrl:MenuController, public callNumber:CallNumber, public IAB:InAppBrowser ) {
+    console.log("Inside of Shelter for everyone");
   }
 
   @ViewChild(Slides) slides: Slides;

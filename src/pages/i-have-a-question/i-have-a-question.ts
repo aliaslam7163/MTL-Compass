@@ -34,9 +34,6 @@ ionViewWillEnter()
 {
   this.menuView = this.slides.isBeginning();
   this.slides.lockSwipes(true);
-  // console.log(this.menuView);
-  // console.log(this.backView);
-  // console.log(this.slides.getActiveIndex());
 
   if(this.slides.getActiveIndex() > 0)
   {
@@ -50,9 +47,6 @@ ionViewWillEnter()
 slideChanged()
 {
   this.menuView = this.slides.isBeginning();
-  // console.log(this.menuView);
-  // console.log(this.backView);
-  // console.log(this.slides.getActiveIndex());
 
   if(this.slides.getActiveIndex() > 0)
   {

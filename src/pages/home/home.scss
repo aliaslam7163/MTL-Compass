@@ -12,3 +12,25 @@ page-home {
 .row{
   align-items: center;
 }
+
+button{
+  width:auto;
+  height:75px;
+}
+
+.Absolute-Center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  height: 90%;
+}
+
+ion-icon{
+  margin-right: 20px;
+  margin-left:0px;
+  padding-left: 0px;
+}
+
+ion-button{
+  margin-left:0px;
+}

@@ -1,76 +1,96 @@
 <ion-header>
-  <ion-navbar>
-    <ion-buttons end>
-      <button ion-button icon-only menuToggle>MTL Compass
+  <ion-navbar hideBackButton="true">
+      <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-buttons>
+    <ion-title float-right style="text-align:right;">MTL Compass</ion-title>
   </ion-navbar>
-  <title>MTL Compass</title>
 </ion-header>
+
 
 <ion-content padding>
 
   <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
     <ion-slide>
-
-      <ion-grid>
+      <div class="Absolute-Center">
         <ion-row left justify-content-start>
-          <ion-col col-md-1>
-              <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
-              <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+          <ion-col>
+              <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
+              <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left>Back</a>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
           </ion-col>
         </ion-row>
           <ion-row left justify-content-start>
-            <ion-col col-sm-9>
-                <h4 text-left id="applyForWorkPermit-heading23" style="color:#000000;" class="padding">Have you had your immigration medical exam?</h4>
+            <ion-col>
+                <h4 id="applyForWorkPermit-heading23" style="color:#000000;text-align:left;" class="padding" float-left>Have you had your immigration medical exam?</h4>
             </ion-col>
           </ion-row>
           <ion-row left justify-content-start>
-            <ion-col col-md-1>
-              <button id="applyForWorkPermit-next" (click)="lastResortAssist()"  ion-button round item-end>
+            <ion-col>
+              <button id="applyForWorkPermit-next" (click)="applyForWorkPermit()"  ion-button  icon-left round outline float-right>
+                <ion-icon name="checkmark" ></ion-icon>
                 Yes
               </button>
             </ion-col>
-            <ion-col col-md-1>
-              <button id="applyForWorkPermit-next" (click)="slide()"  ion-button round item-end>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <button id="applyForWorkPermit-next" (click)="slide()" icon-left ion-button round float-right>
+                <ion-icon name="close"></ion-icon>
                 No
               </button>
             </ion-col>
           </ion-row>
-      </ion-grid>
+      </div>
     </ion-slide>
 
 
 
     <ion-slide>
-      <ion-grid>
+      <div class="Absolute-Center">
         <ion-row left justify-content-start>
-          <ion-col col-md-1>
-              <button *ngIf="backView == true" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
-          </ion-col>
-        </ion-row>
-        <ion-row left justify-content-start>
-          <ion-col col-sm-9>
-              <h4 text-left id="medical" style="color:#000000;" class="padding">Clinics for medical exam:</h4>
+          <ion-col>
+              <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-                <ion-select [(ngModel)]="selectedOpt" interface=popover placeholder="Select Organization" (ionChange)="organizationOpt($event)">
-                  <ion-option *ngFor="let org of organization" >{{org.label}}</ion-option>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+          </ion-col>
+        </ion-row>
+        <ion-row left justify-content-start>
+          <ion-col>
+              <h4 text-left id="medical" style="color:#000000;text-align:left;" class="padding">Clinics for medical exam:</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+                <ion-select [(ngModel)]="selectedOpt" interface=popover placeholder="Select Organization" (ionChange)="organizationOpt($event)" style="width:100%;">
+                  <ion-option *ngFor="let org of organization" style="width:auto;">{{org.label}}</ion-option>
               </ion-select>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-                <button id="applyForWorkPermit-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Call</button>
-          </ion-col>
-          <ion-col>
-                <button id="applyForWorkPermit-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Map</button>
+                <button id="applyForWorkPermit-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round outline float-right>
+                  <ion-icon name="ios-call-outline"></ion-icon>
+                  Call
+                </button>
           </ion-col>
         </ion-row>
-      </ion-grid>
+        <ion-row>
+          <ion-col>
+                <button id="applyForWorkPermit-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round float-right>
+                  <ion-icon name="ios-map-outline"></ion-icon>
+                  Map
+                </button>
+          </ion-col>
+        </ion-row>
+      </div>
     </ion-slide>
   </ion-slides>
 </ion-content>

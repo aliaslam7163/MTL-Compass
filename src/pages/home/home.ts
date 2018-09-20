@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+
+import { NavController,Nav } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { DoYouHaveAPlaceToStayPage } from '../do-you-have-a-place-to-stay/do-you-have-a-place-to-stay';
 
@@ -9,6 +10,7 @@ import { DoYouHaveAPlaceToStayPage } from '../do-you-have-a-place-to-stay/do-you
 })
 export class HomePage {
   greeting:string = '';
+  @ViewChild(Nav) nav:Nav;
 
   constructor(public navCtrl: NavController, public menuCtrl:MenuController) {
     console.log("Inside of Home");
@@ -35,7 +37,8 @@ export class HomePage {
 
   doYouHaveAPlaceToStay()
   {
-    this.navCtrl.push(DoYouHaveAPlaceToStayPage);
+
+    this.navCtrl.setRoot(DoYouHaveAPlaceToStayPage);
   }
 
 }

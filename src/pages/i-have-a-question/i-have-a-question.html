@@ -1,10 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons end>
-      <button ion-button icon-only menuToggle>MTL Compass
+      <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-buttons>
+    <ion-title float-right style="text-align:right;">MTL Compass</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,34 +11,40 @@
   <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
 
   <ion-slide>
-    <ion-grid>
-      <ion-row left justify-content-start>
-        <ion-col col-md-1>
-            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
-            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+    <div class="Absolute-Center">
+      <ion-row>
+        <ion-col>
+            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
+            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear float-left no-padding no-margin>Back</a>
         </ion-col>
       </ion-row>
-        <ion-row left justify-content-start>
-          <ion-col col-sm-9>
-              <h4 text-left id="doYouHaveAPlaceToStay-heading23" style="color:#000000;" class="padding">Do you have a question? I can help find the answer or you connect to the right organization.</h4>
+      <ion-row>
+        <ion-col>
+            <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+        </ion-col>
+      </ion-row>
+        <ion-row >
+          <ion-col >
+              <h4 float-right id="doYouHaveAPlaceToStay-heading23" style="color:#000000;text-align:left;" class="padding">Do you have a question? I can help find the answer or you connect to the right organization.</h4>
           </ion-col>
         </ion-row>
         <ion-row left justify-content-start>
-          <ion-col col-md-1>
-            <button id="doYouHaveAPlaceToStay-next" (click)="slide()"  ion-button round item-end>
-              I have a question
+          <ion-col >
+            <button id="doYouHaveAPlaceToStay-next" (click)="slide()"  ion-button icon-left round float-right small>
+              <ion-icon  name="help" md="md-help" ></ion-icon>
+              Ask
             </button>
           </ion-col>
         </ion-row>
-  </ion-grid>
+  </div>
   </ion-slide>
 
   <ion-slide>
-    <ion-grid>
+    <div class="Absolute-Center">
       <ion-row left justify-content-start>
-        <ion-col col-md-1>
-            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left> Back</button>
-            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear>Back</a>
+        <ion-col >
+            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
+            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear float-left no-padding no-margin>Back</a>
         </ion-col>
       </ion-row>
       <ion-row left justify-content-start>
@@ -58,11 +63,14 @@
           <ion-label>Question</ion-label>
           <ion-textarea placeholder="How can I enroll my children in school?" [(ngModel)]="question" name="question"></ion-textarea>
         </ion-item>
-        <button ion-button type="submit" block>Ask Question</button>
+        <button ion-button type="submit" block icon-left>
+          <ion-icon ios="ios-send-outline" md="md-send"></ion-icon>
+          Ask Question
+        </button>
       </form>
     </ion-col>
   </ion-row>
-  </ion-grid>
+</div>
   </ion-slide>
 
 </ion-slides>

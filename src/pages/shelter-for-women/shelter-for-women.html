@@ -1,25 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <ion-buttons end>
-      <button ion-button icon-only menuToggle>MTL Compass
+  <ion-navbar hideBackButton="true">
+      <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-buttons>
+    <ion-title float-right style="text-align:right;">MTL Compass</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
     <ion-slide>
-      <ion-grid>
+      <div class="Absolute-Center">
         <ion-row left justify-content-start>
-          <ion-col col-md-1>
-              <button id="shelterForWomen-button59" (click)="doYouHaveAPlaceToStay()"   ion-button color="blue" clear item-end left> Back</button>
+          <ion-col>
+              <button id="shelterForWomen-button59" (click)="doYouHaveAPlaceToStay()"   ion-button color="blue" clear no-padding no-margin float-left> Back</button>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col justify-content-start>
+              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
           </ion-col>
         </ion-row>
           <ion-row left justify-content-start>
-            <ion-col col-sm-9>
-                <h4 text-left id="shelterForWomen-heading23" style="color:#000000;" class="padding">Accomdation for women:</h4>
+            <ion-col>
+                <h4 float-left id="shelterForWomen-heading23" style="color:#000000;text-align:left;" class="padding">Accomdation for women:</h4>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -31,13 +35,21 @@
         </ion-row>
         <ion-row>
           <ion-col>
-                <button id="shelterForWomen-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Call</button>
-
-
-                <button id="shelterForWomen-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left >Map</button>
+                <button id="applyForWorkPermit-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round outline float-right>
+                  <ion-icon name="ios-call-outline"></ion-icon>
+                  Call
+                </button>
           </ion-col>
         </ion-row>
-    </ion-grid>
+        <ion-row>
+          <ion-col>
+                <button id="applyForWorkPermit-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round float-right>
+                  <ion-icon name="ios-map-outline"></ion-icon>
+                  Map
+                </button>
+          </ion-col>
+        </ion-row>
+    </div>
     </ion-slide>
 
 

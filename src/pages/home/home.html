@@ -9,21 +9,33 @@
 </ion-header>
 
 <ion-content padding class="vertical-align-content" text-center>
-  <ion-grid>
+<div class="Absolute-Center">
+  <ion-row >
+    <ion-col justify-content-start>
+        <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+    </ion-col>
+  </ion-row>
           <ion-row align-items-center>
-            <ion-col col-sm-3 offset-3>
-                <h4 text-left id="home-heading23" style="color:#000000;" class="padding">{{greeting}}! What can I help you with?</h4>
+            <ion-col>
+                <h4 text-left id="home-heading23"  class="padding">{{greeting}}! What can I help you with?</h4>
             </ion-col>
           </ion-row>
-          <ion-row align-items-center justify-content-center>
-            <ion-col col-sm-3 align-self-center justify-content-center>
-              <button id="home-place" (click)="doYouHaveAPlaceToStay()"  ion-button round item-end>
-                I need place to stay
+          <ion-row align-items-center justify-content-end>
+            <ion-col>
+              <button id="home-place" (click)="doYouHaveAPlaceToStay()"  ion-button round outline icon-left  float-right>
+                <ion-icon name="hand" float-left></ion-icon>
+                I just arrived
               </button>
-              <button id="home-next" (click)="openMenu()"  ion-button round item-end>
+
+            </ion-col>
+          </ion-row>
+          <ion-row  justify-content-end>
+            <ion-col>
+              <button id="home-next" (click)="openMenu()"  ion-button round icon-left float-right>
+                <ion-icon name="compass"></ion-icon>
                 Something else
               </button>
             </ion-col>
           </ion-row>
-      </ion-grid>
+      </div>
 </ion-content>

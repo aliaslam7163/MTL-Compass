@@ -80,19 +80,19 @@ export class DoYouHaveAPlaceToStayPage {
   }
 
   immmigrationMedicalExam(){
-    this.navCtrl.push(ImmigrationMedicalExamPage);
+    this.navCtrl.setRoot(ImmigrationMedicalExamPage);
   }
 
   shelterForWomen(){
-    this.navCtrl.push(ShelterForWomenPage);
+    this.navCtrl.setRoot(ShelterForWomenPage);
   }
 
   shelterForWomenAndChildren(){
-      this.navCtrl.push(ShelterForWomenAndChildPage);
+      this.navCtrl.setRoot(ShelterForWomenAndChildPage);
   }
 
   shelterForEveryone(){
-      this.navCtrl.push(ShelterForEveryonePage);
+      this.navCtrl.setRoot(ShelterForEveryonePage);
   }
 
 }

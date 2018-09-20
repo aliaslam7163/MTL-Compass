@@ -20,7 +20,7 @@ import { ApplyForWorkPermitPage } from '../apply-for-work-permit/apply-for-work-
   templateUrl: 'last-resort-assistance.html',
 })
 export class LastResortAssistancePage {
-  backView:boolean = false;
+  backView:boolean = true;
   menuView:boolean = false;
 
     constructor(public navCtrl: NavController, public callNumber:CallNumber, public IAB:InAppBrowser, public menuCtrl:MenuController ) {

@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 
 /**
  * Generated class for the ApplyForWorkPermitPage page.
@@ -83,7 +83,14 @@ export class ApplyForWorkPermitPage {
 
       reDirect()
       {
-        this.IAB.create("https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html");
+        const options: InAppBrowserOptions = {
+          hidenavigationbuttons : 'no',
+          toolbar : 'no',
+          hardwareback:'yes',
+          disallowoverscroll: 'no'
+
+        }
+        this.IAB.create("https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",'_self',options);
       }
 
 

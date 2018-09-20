@@ -87,7 +87,14 @@ export class ApplyForWorkPermitPage {
           hidenavigationbuttons : 'no',
           toolbar : 'no',
           hardwareback:'yes',
-          disallowoverscroll: 'no'
+          disallowoverscroll: 'no',
+          zoom: 'no',
+      location:'yes',
+      toolbar:'yes',
+      clearcache: 'yes',
+      clearsessioncache: 'yes',
+      disallowoverscroll: 'yes',
+      enableViewportScale: 'yes'
 
         }
         this.IAB.create("https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",'_self',options);

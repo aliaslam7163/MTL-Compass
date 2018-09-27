@@ -17,7 +17,9 @@ export class ShelterForWomenPage {
   menuView:boolean = false;
   backView:boolean = true;
   selectedOpt = "";
-  mapQuery = "";
+  OrgMap = "";
+  OrgPhone = '';
+  Org:any;
   organization =
     [
       {
@@ -111,29 +113,30 @@ export class ShelterForWomenPage {
     this.slides.lockSwipes(true);
   }
 
-  callOrg()
-  {
-    console.log("Insde the call Now Function");
-    let targetOrg = this.organization.find(org =>
-    org.label == this.selectedOpt
-      );
-    console.log(targetOrg.phone);
-    this.callNumber.callNumber(targetOrg.phone, true)
-        .then(res => console.log('Launched dialer!', res))
-        .catch(err => console.log('Error launching dialer', err));
-  }
-
   organizationOpt(e)
   {
     this.selectedOpt = e;
-    this.mapQuery = this.selectedOpt.replace(' ','+')
-    console.log(this.mapQuery);
+    console.log(this.selectedOpt);
+    this.Org = this.organization.find(org =>
+      org.label == this.selectedOpt
+    );
+    console.log(this.Org);
   }
 
-  openMap()
+  callOrg()
   {
-    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery,'_sytsem');
+
+    console.log(this.Org.phone);
+    this.callNumber.callNumber(this.Org.phone, true)
+    .then(res => console.log('Launched dialer!', res))
+    .catch(err => console.log('Error launching dialer', err));
   }
+
+    openMap()
+    {
+        console.log(this.Org.address);
+        this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.Org.address,'_system');
+    }
 
   doYouHaveAPlaceToStay()
   {

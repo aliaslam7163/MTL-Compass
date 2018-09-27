@@ -24,7 +24,9 @@ export class ShelterForEveryonePage {
   menuView:boolean = false;
   backView:boolean = true;
   selectedOpt = "";
-  mapQuery = "";
+  OrgMap = "";
+  OrgPhone = '';
+  Org:any;
   organization =
     [
       {
@@ -119,34 +121,30 @@ export class ShelterForEveryonePage {
     this.slides.lockSwipes(true);
   }
 
-  callOrg()
-  {
-    console.log("Insde the call Now Function");
-    let targetOrg = this.organization.find(org =>
-    org.label == this.selectedOpt
-      );
-    console.log(targetOrg.phone);
-    if(this.callNumber.isCallSupported())
-    {
-      this.callNumber.callNumber(targetOrg.phone, true)
-          .then(res => console.log('Launched dialer!', res))
-          .catch(err => console.log('Error launching dialer', err));
-    }
-    else
-      console.log("Calling not supported");
-
-  }
-
   organizationOpt(e)
   {
     this.selectedOpt = e;
-    this.mapQuery = this.selectedOpt.replace(' ','+')
+    console.log(this.selectedOpt);
+    this.Org = this.organization.find(org =>
+      org.label == this.selectedOpt
+    );
+    console.log(this.Org);
   }
 
-  openMap()
+  callOrg()
   {
-    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery,'_system');
+
+    console.log(this.Org.phone);
+    this.callNumber.callNumber(this.Org.phone, true)
+    .then(res => console.log('Launched dialer!', res))
+    .catch(err => console.log('Error launching dialer', err));
   }
+
+    openMap()
+    {
+        console.log(this.Org.address);
+        this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.Org.address,'_system');
+    }
 
   doYouHaveAPlaceToStay()
   {

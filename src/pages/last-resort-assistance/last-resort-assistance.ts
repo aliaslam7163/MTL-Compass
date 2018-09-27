@@ -63,25 +63,25 @@ export class LastResortAssistancePage {
     {
       this.slides.lockSwipes(false);
       console.log("hello world");
-      this.slides.slideNext(200);
+      this.slides.slideNext(700);
       this.slides.lockSwipes(true);
     }
 
     slideBack()
     {
       this.slides.lockSwipes(false);
-      this.slides.slidePrev(200);
+      this.slides.slidePrev(700);
       this.slides.lockSwipes(true);
     }
 
     reDirect()
     {
-      this.IAB.create("http://www.emploiquebec.gouv.qc.ca/en/citizens/obtaining-financial-assistance/social-assistance-and-social-solidarity-programs/#c169");
+      this.IAB.create("http://www.emploiquebec.gouv.qc.ca/en/citizens/obtaining-financial-assistance/social-assistance-and-social-solidarity-programs/#c169",'_system');
     }
 
     applyForWorkPermit()
     {
-      this.navCtrl.push(ApplyForWorkPermitPage);
+      this.navCtrl.push(ApplyForWorkPermitPage,{},{animate:true,direction:'forward'});
     }
 
     callOrg()
@@ -94,7 +94,7 @@ export class LastResortAssistancePage {
 
     openMap()
     {
-      this.IAB.create("https://www.google.com/maps/search/?api=1&query=287+Rue+Notre-Dame+Ouest,+Montréal,+QC+H2Y+1T8");
+      this.IAB.create("https://www.google.com/maps/search/?api=1&query=287+Rue+Notre-Dame+Ouest,+Montréal,+QC+H2Y+1T8",'_system');
     }
 
 }

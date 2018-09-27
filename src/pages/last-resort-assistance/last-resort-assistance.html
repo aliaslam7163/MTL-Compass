@@ -5,35 +5,33 @@
 <ion-content padding>
   <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
   <ion-slide>
-    <div class="Absolute-Center">
+    <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row left justify-content-start>
         <ion-col>
             <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end float-left no-padding no-margin> Back</button>
-            <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left>Back</a>
+            <a *ngIf="menuView == true" (click)="openMenu()" id="applyForWorkPermit-button54"  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-back" style="margin-right:5px !important;" ></ion-icon>Back</a>
         </ion-col>
       </ion-row>
       <ion-row >
         <ion-col justify-content-start>
-            <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+            <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
         </ion-col>
       </ion-row>
         <ion-row left justify-content-start>
           <ion-col>
-              <h4 float-left id="applyForWorkPermit-heading23" style="color:#000000;text-align:left;" class="padding">Have you applied for financial assistance (welfare)?</h4>
+              <h4 float-left id="applyForWorkPermit-heading23" style="color:#000000;text-align:left;" padding>Have you applied for financial assistance (welfare)?</h4>
           </ion-col>
         </ion-row>
         <ion-row left justify-content-start>
           <ion-col>
-            <button id="applyForWorkPermit-next" (click)="applyForWorkPermit()"  ion-button  icon-left round outline float-right>
-              <ion-icon name="checkmark" item-start></ion-icon>
+            <button id="applyForWorkPermit-next" (click)="applyForWorkPermit()" style="width:60% !important;text-transform:none;" ion-button  icon-left round outline float-right>
               Yes
             </button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <button id="applyForWorkPermit-next" (click)="slide()" icon-left ion-button round float-right>
-              <ion-icon name="close" item-start></ion-icon>
+            <button id="applyForWorkPermit-next" (click)="slide()" style="width:60% !important;text-transform:none;" icon-left ion-button round float-right>
               No
             </button>
           </ion-col>
@@ -44,33 +42,33 @@
 
 
   <ion-slide>
-    <div class="Absolute-Center">
+    <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row left justify-content-start>
         <ion-col>
-            <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
+            <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
         </ion-col>
       </ion-row>
       <ion-row >
         <ion-col justify-content-start>
-            <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+            <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
         </ion-col>
       </ion-row>
       <ion-row left justify-content-start>
         <ion-col>
-            <h4 float-left id="medical" style="color:#000000;text-align:left;" class="padding">As a newcomer you may recieve social assistance if you meet eligibility criteria similar to those of residents.</h4>
+            <h4 float-left id="medical" style="color:#000000;text-align:left;" padding>As a newcomer you may recieve social assistance if you meet eligibility criteria similar to those of residents.</h4>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-              <button id="applyForWorkPermit-button61" (click)="reDirect()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round outline float-right>
+              <button id="" (click)="reDirect()" style="width:60% !important;text-transform:none;" ion-button icon-left round outline float-right>
                 <ion-icon name="ios-information-circle-outline"></ion-icon>
                 More Information</button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-              <button id="applyForWorkPermit-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left float-right>
-                <ion-icon name="ios-send-outline"></ion-icon>
+              <button id="applyForWorkPermit-button61" (click)="slide()" style="width:60% !important;text-transform:none;" ion-button round icon-left float-right>
+                <ion-icon name="briefcase"></ion-icon>
                 Submit
               </button>
         </ion-col>
@@ -80,48 +78,43 @@
 
 
   <ion-slide>
-    <div class="Absolute-Center">
+    <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row left justify-content-start>
         <ion-col>
-            <button *ngIf="backView == false" id="applyForWorkPermit-button59" (click)="slideBack()"   ion-button color="blue" clear item-end float-left no-padding no-margin> Back</button>
+              <button id="" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
         </ion-col>
       </ion-row>
       <ion-row >
         <ion-col justify-content-start>
-            <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+            <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
         </ion-col>
       </ion-row>
       <ion-row left justify-content-start>
         <ion-col>
-            <h4 float-left id="medical" style="color:#000000;text-align:left;" class="padding">Once you've completed the welfare form, you must submit it to:</h4>
-            <p style="text-align:left;">Centre Specialise Des Demandeurs D'asile (CSDA):<br/>
+            <h4 float-left id="medical" style="color:#000000;text-align:left;" padding>Once you've completed the welfare form, you must submit it to:</h4>
+            <p padding style="text-align:left;">Centre Specialise Des Demandeurs D'asile (CSDA):<br/>
               <strong>1004 St-Antoine Street West (Metro Bonaventure)</strong>
             </p>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-              <button id="applyForWorkPermit-button61" (click)="callOrg()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round outline float-right>
+              <button id="" (click)="callOrg()" style="width:60% !important;text-transform:none;"  ion-button icon-left round outline float-right >
                 <ion-icon name="ios-call-outline"></ion-icon>
-                Call
+                Call Orgnization
               </button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-              <button id="applyForWorkPermit-button61" (click)="openMap()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round float-right>
+              <button id="" (click)="openMap()" style="width:60% !important; text-transform:none;" ion-button icon-left round float-right>
                 <ion-icon name="ios-map-outline"></ion-icon>
-                Map
+                Get directions
               </button>
         </ion-col>
       </ion-row>
     </div>
   </ion-slide>
-
-
-
-
-
 </ion-slides>
 </ion-content>
 

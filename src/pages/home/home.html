@@ -9,10 +9,10 @@
 </ion-header>
 
 <ion-content padding class="vertical-align-content" text-center>
-<div class="Absolute-Center">
+<div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
   <ion-row >
     <ion-col justify-content-start>
-        <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+        <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
     </ion-col>
   </ion-row>
           <ion-row align-items-center>
@@ -21,8 +21,8 @@
             </ion-col>
           </ion-row>
           <ion-row align-items-center justify-content-end>
-            <ion-col>
-              <button id="home-place" (click)="doYouHaveAPlaceToStay()"  ion-button round outline icon-left  float-right>
+            <ion-col >
+              <button id="home-place" (click)="doYouHaveAPlaceToStay()" style="width: 60% !important;text-transform:none;" ion-button round outline icon-left  float-right>
                 <ion-icon name="hand" float-left></ion-icon>
                 I just arrived
               </button>
@@ -31,7 +31,7 @@
           </ion-row>
           <ion-row  justify-content-end>
             <ion-col>
-              <button id="home-next" (click)="openMenu()"  ion-button round icon-left float-right>
+              <button id="home-next" (click)="openMenu()" style="width: 60% !important;text-transform:none;"  ion-button round icon-left float-right>
                 <ion-icon name="compass"></ion-icon>
                 Something else
               </button>

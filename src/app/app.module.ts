@@ -7,6 +7,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { EmailComposer } from '@ionic-native/email-composer';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ApplyForWorkPermitPage } from '../pages/apply-for-work-permit/apply-for-work-permit';
@@ -17,6 +18,7 @@ import { ShelterForEveryonePage } from '../pages/shelter-for-everyone/shelter-fo
 import { ShelterForWomenPage } from '../pages/shelter-for-women/shelter-for-women';
 import { ShelterForWomenAndChildPage } from '../pages/shelter-for-women-and-child/shelter-for-women-and-child';
 import { DoYouHaveAPlaceToStayPage } from '../pages/do-you-have-a-place-to-stay/do-you-have-a-place-to-stay';
+import { SplashPage } from '../pages/splash/splash';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { DoYouHaveAPlaceToStayPage } from '../pages/do-you-have-a-place-to-stay/
     ShelterForEveryonePage,
     ShelterForWomenPage,
     ShelterForWomenAndChildPage,
-    DoYouHaveAPlaceToStayPage
+    DoYouHaveAPlaceToStayPage,
+    SplashPage
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { DoYouHaveAPlaceToStayPage } from '../pages/do-you-have-a-place-to-stay/
     ShelterForEveryonePage,
     ShelterForWomenPage,
     ShelterForWomenAndChildPage,
+    SplashPage,
   ],
   providers: [
     StatusBar,

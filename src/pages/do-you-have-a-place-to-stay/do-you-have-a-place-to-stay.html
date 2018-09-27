@@ -3,39 +3,37 @@
 </ion-header>
 
 <ion-content padding  text-center>
-  <ion-slides  direction="vertical" (ionSlideDidChange)="slideChanged()">
+  <ion-slides  direction="vertical" speed=2000 (ionSlideDidChange)="slideChanged()">
 
     <ion-slide>
-      <div class="Absolute-Center">
+      <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
         <ion-row left justify-content-start>
           <ion-col>
-              <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
-              <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54" ion-button color="blue" clear float-left no-padding no-margin>Back</a>
+              <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin small> Back</button>
+              <a *ngIf="menuView == true" (click)="openMenu()" id=""  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-back" style="margin-right:5px !important;" ></ion-icon>Back</a>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+              <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
           </ion-col>
         </ion-row>
 
           <ion-row left justify-content-start>
             <ion-col>
-                <h4 float-left id="doYouHaveAPlaceToStay-heading23" style="color:#000000;text-align:left;" class="padding">Do you have a place to stay tonight?</h4>
+                <h4 float-left id="doYouHaveAPlaceToStay-heading23" style="color:#000000;text-align:left;" padding>Do you have a place to stay tonight?</h4>
             </ion-col>
           </ion-row>
           <ion-row left justify-content-start>
             <ion-col>
-              <button id="doYouHaveAPlaceToStay-next" (click)="immmigrationMedicalExam()"  ion-button icon-left round outline float-right>
-                <ion-icon name="checkmark" item-start></ion-icon>
+              <button id="doYouHaveAPlaceToStay-next" (click)="immmigrationMedicalExam()" style="width: 60% !important;text-transform:none;"  ion-button icon-left round outline float-right>
                 Yes
               </button>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              <button id="applyForWorkPermit-next" (click)="slide()" icon-left ion-button round float-right>
-                <ion-icon name="close" item-start></ion-icon>
+              <button id="applyForWorkPermit-next" (click)="slide()" style="width: 60% !important;text-transform:none;" icon-left ion-button round float-right>
                 No
               </button>
             </ion-col>
@@ -44,36 +42,33 @@
     </ion-slide>
 
     <ion-slide>
-      <div class="Absolute-Center">
+      <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
         <ion-row left justify-content-start>
           <ion-col>
-              <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
-              <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear float-left  no-padding no-margin>Back</a>
+              <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
           </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-                <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+                <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
             </ion-col>
           </ion-row>
 
         <ion-row left justify-content-start>
       <ion-col>
-          <h4 id="medical" float-left style="text-align:left;" class="padding">Do you prefer an All-Womens shelter?</h4>
+          <h4 id="medical" float-left style="text-align:left;" padding>Do you prefer an All-Womens shelter?</h4>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col >
-            <button id="doYouHaveAPlaceToStay-button61" (click)="slide()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round outline float-right>
-              <ion-icon name="checkmark" item-start></ion-icon>
+            <button id="doYouHaveAPlaceToStay-button61" (click)="slide()" style="width: 60% !important;text-transform:none;" ion-button icon-left round outline float-right>
               Yes
             </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-            <button id="doYouHaveAPlaceToStay-button61" (click)="shelterForEveryone()" style="border-radius:50px 50px 50px 50px;" ion-button icon-left round float-right >
-              <ion-icon name="close" item-start></ion-icon>
+            <button id="doYouHaveAPlaceToStay-button61" (click)="shelterForEveryone()" style="width: 60% !important;text-transform:none;" ion-button icon-left round float-right >
               No
             </button>
       </ion-col>
@@ -84,35 +79,32 @@
 
     <!-- Test slide with html and css -->
     <ion-slide>
-      <div class="Absolute-Center">
+      <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
         <ion-row >
           <ion-col>
-              <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear item-end left float-left no-padding no-margin> Back</button>
-              <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear float-left no-padding no-margin>Back</a>
+              <button id="" (click)="slideBack()" style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
           </ion-col>
         </ion-row>
         <ion-row >
           <ion-col>
-              <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+              <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-              <h4 float-left  id="medical" style="color:#000000;text-align:left;" class="padding">Do you have children?</h4>
+              <h4 float-left  id="medical" style="color:#000000;text-align:left;" padding>Do you have children?</h4>
           </ion-col>
         </ion-row>
           <ion-row justify-content-end>
             <ion-col>
-                  <button id="doYouHaveAPlaceToStay-button61" (click)="shelterForWomenAndChildren()"  ion-button icon-left round outline float-right >
-                    <ion-icon name="checkmark" item-start></ion-icon>
+                  <button id="doYouHaveAPlaceToStay-button61" (click)="shelterForWomenAndChildren()" style="width: 60% !important;text-transform:none;" ion-button icon-left round outline float-right >
                     Yes
                   </button>
             </ion-col>
           </ion-row>
           <ion-row justify-content-end>
             <ion-col>
-                  <button id="doYouHaveAPlaceToStay-button61" (click)="shelterForWomen()"  ion-button icon-left round float-right>
-                  <ion-icon name="close" item-start></ion-icon>
+                  <button id="doYouHaveAPlaceToStay-button61" (click)="shelterForWomen()" style="width: 60% !important;text-transform:none;"  ion-button icon-left round float-right>
                     No
                   </button>
             </ion-col>

@@ -2,6 +2,14 @@ page-home {
 
 }
 
+/*ion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}*/
+
 .vertical-align-content{
   display: flex !important;
   align-content: center !important;
@@ -20,9 +28,10 @@ button{
 
 .Absolute-Center {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center !important;
   height: 90%;
+
 }
 
 ion-icon{
@@ -33,4 +42,5 @@ ion-icon{
 
 ion-button{
   margin-left:0px;
+  text-transform:none !important;
 }

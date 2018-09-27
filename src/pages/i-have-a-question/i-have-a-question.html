@@ -6,27 +6,28 @@
   <ion-slides direction="vertical" (ionSlideDidChange)="slideChanged()">
 
   <ion-slide>
-    <div class="Absolute-Center">
+    <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row>
         <ion-col>
             <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
-            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear float-left no-padding no-margin>Back</a>
+            <a *ngIf="menuView == true" (click)="openMenu()" id=""  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-back" style="margin-right:5px !important;" ></ion-icon>Back</a>
+
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-            <img src="../../assets/imgs/compass.png" style="width:50px;height:50px;" float-left>
+            <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
         </ion-col>
       </ion-row>
         <ion-row >
           <ion-col >
-              <h4 float-right id="doYouHaveAPlaceToStay-heading23" style="color:#000000;text-align:left;" class="padding">Do you have a question? I can help find the answer or you connect to the right organization.</h4>
+              <h4 float-right id="doYouHaveAPlaceToStay-heading23" style="color:#000000;text-align:left;" padding>Do you have a question? I can help find the answer or you connect to the right organization.</h4>
           </ion-col>
         </ion-row>
         <ion-row left justify-content-start>
           <ion-col >
-            <button id="doYouHaveAPlaceToStay-next" (click)="slide()"  ion-button icon-left round float-right small>
-              <ion-icon  name="help" md="md-help" ></ion-icon>
+            <button (click)="slide()" style="width: 60% !important;text-transform:none;" ion-button icon-left round float-right>
+              <ion-icon  name="help" md="md-help" item-start ></ion-icon>
               Ask
             </button>
           </ion-col>
@@ -35,36 +36,66 @@
   </ion-slide>
 
   <ion-slide>
-    <div class="Absolute-Center">
-      <ion-row left justify-content-start>
+    <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
+      <ion-row>
         <ion-col >
-            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
-            <a *ngIf="menuView == true" (click)="openMenu()" id="doYouHaveAPlaceToStay-button54"  style="text-align:left;" ion-button color="blue" clear float-left no-padding no-margin>Back</a>
+          <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
         </ion-col>
       </ion-row>
-      <ion-row left justify-content-start>
-    <ion-col col-sm-9>
-        <h4 text-left id="medical" style="color:#000000;" class="padding">What can I help you with?</h4>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <form (ngSubmit)="sendEmail()">
-        <ion-item>
-          <ion-label>Email</ion-label>
-          <ion-input type="text" [(ngModel)]="emailAddr" name="title"></ion-input>
+      <ion-row>
+        <ion-col>
+            <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <h4 padding float-left>What can I help you with?</h4>
+        </ion-col>
+      </ion-row>
+      <form>
+        <ion-item  no-padding no-lines>
+          <ion-label no-padding style="height:100px;"></ion-label>
+          <span></span>
+          <ion-textarea no-padding placeholder="How can I enroll my children in school?" [(ngModel)]="question" name="question" style="border-width:1px;border-style:solid;border-color:#ddd;border-right:0px !important; border-left:0px !important;color:#444;"></ion-textarea>
         </ion-item>
-        <ion-item>
-          <ion-label>Question</ion-label>
-          <ion-textarea placeholder="How can I enroll my children in school?" [(ngModel)]="question" name="question"></ion-textarea>
-        </ion-item>
-        <button ion-button type="submit" block icon-left>
-          <ion-icon ios="ios-send-outline" md="md-send"></ion-icon>
-          Ask Question
+        <button style="width: 60% !important;text-transform:none;" type="submit" (click)="slide()" ion-button round outline float-right icon-left>
+          Next
         </button>
       </form>
-    </ion-col>
-  </ion-row>
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
+      <ion-row left justify-content-start>
+        <ion-col >
+          <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <img src="../../assets/imgs/compass.png" style="width:70px;height:70px;" float-left>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <h4 padding float-left>What is the best email we can reach you at?</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <form (ngSubmit)="sendEmail()">
+            <ion-item no-padding>
+              <ion-label>Email</ion-label>
+              <ion-input full type="text" [(ngModel)]="emailAddr" name="title"></ion-input>
+            </ion-item>
+            <button  type="submit"  ion-button full block icon-left>
+              <ion-icon ios="ios-send-outline" md="md-send"></ion-icon>
+              Ask Question
+            </button>
+          </form>
+        </ion-col>
+      </ion-row>
 </div>
   </ion-slide>
 

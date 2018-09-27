@@ -66,7 +66,7 @@ slide()
 {
   this.slides.lockSwipes(false);
   console.log("Slide Foward");
-  this.slides.slideNext(200);
+  this.slides.slideNext(700);
   this.slides.lockSwipes(true);
 }
 
@@ -74,7 +74,7 @@ slideBack()
 {
   console.log("Slide Back");
   this.slides.lockSwipes(false);
-  this.slides.slidePrev(200);
+  this.slides.slidePrev(700);
   this.slides.lockSwipes(true);
 }
 

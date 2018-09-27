@@ -67,7 +67,7 @@ export class DoYouHaveAPlaceToStayPage {
   {
     this.slides.lockSwipes(false);
     console.log("Slide Foward");
-    this.slides.slideNext(200);
+    this.slides.slideNext(700);
     this.slides.lockSwipes(true);
   }
 
@@ -75,24 +75,24 @@ export class DoYouHaveAPlaceToStayPage {
   {
     console.log("Slide Back");
     this.slides.lockSwipes(false);
-    this.slides.slidePrev(200);
+    this.slides.slidePrev(700);
     this.slides.lockSwipes(true);
   }
 
   immmigrationMedicalExam(){
-    this.navCtrl.setRoot(ImmigrationMedicalExamPage);
+    this.navCtrl.push(ImmigrationMedicalExamPage,{},{animate:true,direction:'forward'});
   }
 
   shelterForWomen(){
-    this.navCtrl.setRoot(ShelterForWomenPage);
+    this.navCtrl.push(ShelterForWomenPage,{},{animate:true,direction:'forward'});
   }
 
   shelterForWomenAndChildren(){
-      this.navCtrl.setRoot(ShelterForWomenAndChildPage);
+      this.navCtrl.push(ShelterForWomenAndChildPage,{},{animate:true,direction:'forward'});
   }
 
   shelterForEveryone(){
-      this.navCtrl.setRoot(ShelterForEveryonePage);
+      this.navCtrl.push(ShelterForEveryonePage,{},{animate:true,direction:'forward'});
   }
 
 }

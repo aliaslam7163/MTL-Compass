@@ -1,18 +1,21 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" persistent="true">
   <ion-header>
     <ion-toolbar>
-      <ion-title>MTL Compass</ion-title>
+      <h4 id="" style="color:#000000;font-weight:300;">Principle Steps for Refugee Claimants</h4>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" item-end>
+      <ion-buttons>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)"  float-right color="blue" >
         <ion-icon [name]="p.icon" item-start></ion-icon>
         {{p.title}}
       </button>
+    </ion-buttons>
     </ion-list>
   </ion-content>
 </ion-menu>
 
 
-<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<ion-nav id="nav" #content [root]="rootPage" ></ion-nav>

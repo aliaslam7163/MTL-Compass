@@ -1,5 +1,6 @@
 page-i-have-a-question {
 
+
 }
 
 
@@ -19,4 +20,12 @@ ion-icon{
 
 ion-button{
   margin-left:0px;
+  text-transform:none !important;
 }
+
+ion-list {
+          max-width: 300px;
+          width:100%;
+          margin: auto;
+          text-align: center;
+      }

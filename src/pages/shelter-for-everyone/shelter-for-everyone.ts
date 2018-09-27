@@ -28,23 +28,35 @@ export class ShelterForEveryonePage {
   organization =
     [
       {
-          'id':'org1',
-          'label': 'La Maisonnée',
-          'phone': '5142713533',
-          'address': '6865 Ave Christophe-Colomb, Montreal, QC H2S 2H3'
-      },
-      {
-          'id':'org2',
-          'label': 'CANA',
-          'phone': '5143820735',
-          'address': '10780 Rue Laverdure, Montréal, QC H3L 2L9'
-      },
-      {
-          'id':'org3',
-          'label': "Comité d'aide aux réfugiés",
-          'phone': '5142726060',
-          'address': '518 Rue Beaubien E, Montreal, QC H2S 1S5'
-      }
+              'id':'org1',
+              'label': 'Mission Old Brewery (Pavilion Webster)',
+              'phone': '5147982244',
+              'address': '915 Clark St Montreal, QC H2Z 1J2'
+          },
+          {
+              'id':'org2',
+              'label': 'Mission Bon Accueil (Pavilion Macaulay - Mission des hommes)',
+              'phone': '5149356396',
+              'address': '1490 Saint-Antoine St W Montreal, QC H3C 1C3'
+          },
+          {
+              'id':'org3',
+              'label': "Maison du Pére",
+              'phone': '5148450168',
+              'address': '550 Boulevard René-Lévesque E Montréal, QC H2L 2L3'
+          },
+          {
+              'id':'org4',
+              'label': "Le Bunker",
+              'phone': '5145140029',
+              'address': ''
+          },
+          {
+              'id':'org5',
+              'label': "Refuge des Jeunes de Montreal",
+              'phone': '5148494221',
+              'address': '1836 St Catherine St E Montreal, QC H2K 2H3'
+          }
     ]
 
   constructor(public navCtrl: NavController, public menuCtrl:MenuController, public callNumber:CallNumber, public IAB:InAppBrowser ) {
@@ -114,21 +126,26 @@ export class ShelterForEveryonePage {
     org.label == this.selectedOpt
       );
     console.log(targetOrg.phone);
-    this.callNumber.callNumber(targetOrg.phone, true)
-        .then(res => console.log('Launched dialer!', res))
-        .catch(err => console.log('Error launching dialer', err));
+    if(this.callNumber.isCallSupported())
+    {
+      this.callNumber.callNumber(targetOrg.phone, true)
+          .then(res => console.log('Launched dialer!', res))
+          .catch(err => console.log('Error launching dialer', err));
+    }
+    else
+      console.log("Calling not supported");
+
   }
 
   organizationOpt(e)
   {
     this.selectedOpt = e;
     this.mapQuery = this.selectedOpt.replace(' ','+')
-    console.log(this.mapQuery);
   }
 
   openMap()
   {
-    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery);
+    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery,'_system');
   }
 
   doYouHaveAPlaceToStay()

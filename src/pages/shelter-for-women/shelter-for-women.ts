@@ -22,21 +22,33 @@ export class ShelterForWomenPage {
     [
       {
           'id':'org1',
-          'label': 'La Maisonnée',
-          'phone': '5142713533',
-          'address': '6865 Ave Christophe-Colomb, Montreal, QC H2S 2H3'
+          'label': 'Mission Old Brewery (Pavillon Patricia McKenzie)',
+          'phone': '5145266446',
+          'address': '1301 Boul. de Maisonneuve Est'
       },
       {
           'id':'org2',
-          'label': 'CANA',
-          'phone': '5143820735',
-          'address': '10780 Rue Laverdure, Montréal, QC H3L 2L9'
+          'label': 'Maison Marquerite',
+          'phone': '5149322250',
+          'address': ''
       },
       {
           'id':'org3',
-          'label': "Comité d'aide aux réfugiés",
-          'phone': '5142726060',
-          'address': '518 Rue Beaubien E, Montreal, QC H2S 1S5'
+          'label': "Rue des femmes",
+          'phone': '5142849665',
+          'address': '1050 Jeanne Mance St, Montreal, QC H2Z 1L7'
+      },
+      {
+          'id':'org4',
+          'label': "La Chaînon",
+          'phone': '5148450151',
+          'address': '4373 Esplanade Ave, Montreal, QC H2W 1T2'
+      },
+      {
+          'id':'org5',
+          'label': "Auberge Madeleine",
+          'phone': '5145971499',
+          'address': ''
       }
     ]
 
@@ -120,7 +132,7 @@ export class ShelterForWomenPage {
 
   openMap()
   {
-    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery);
+    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery,'_sytsem');
   }
 
   doYouHaveAPlaceToStay()

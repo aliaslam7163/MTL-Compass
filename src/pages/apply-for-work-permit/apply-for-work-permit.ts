@@ -5,6 +5,7 @@ import { MenuController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 
+
 /**
  * Generated class for the ApplyForWorkPermitPage page.
  *
@@ -62,7 +63,7 @@ export class ApplyForWorkPermitPage {
       {
         this.slides.lockSwipes(false);
         console.log("Slide Foward");
-        this.slides.slideNext(200);
+        this.slides.slideNext(700);
         this.slides.lockSwipes(true);
       }
 
@@ -70,7 +71,7 @@ export class ApplyForWorkPermitPage {
       {
         console.log("Slide Back");
         this.slides.lockSwipes(false);
-        this.slides.slidePrev(200);
+        this.slides.slidePrev(700);
         this.slides.lockSwipes(true);
       }
 
@@ -84,20 +85,18 @@ export class ApplyForWorkPermitPage {
       reDirect()
       {
         const options: InAppBrowserOptions = {
-          hidenavigationbuttons : 'no',
-          toolbar : 'no',
+          hidenavigationbuttons : 'yes',
           hardwareback:'yes',
-          disallowoverscroll: 'no',
+          disallowoverscroll: 'yes',
           zoom: 'no',
-      location:'yes',
-      toolbar:'yes',
-      clearcache: 'yes',
-      clearsessioncache: 'yes',
-      disallowoverscroll: 'yes',
-      enableViewportScale: 'yes'
+          location:'yes',
+          toolbar:'yes',
+          clearcache: 'yes',
+          clearsessioncache: 'yes',
+          enableViewportScale: 'yes'
 
         }
-        this.IAB.create("https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",'_self',options);
+          this.IAB.create("https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",'_system',options);
       }
 
 

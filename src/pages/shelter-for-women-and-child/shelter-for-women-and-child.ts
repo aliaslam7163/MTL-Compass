@@ -27,23 +27,23 @@ export class ShelterForWomenAndChildPage {
   organization =
     [
       {
-          'id':'org1',
-          'label': 'La Maisonnée',
-          'phone': '5142713533',
-          'address': '6865 Ave Christophe-Colomb, Montreal, QC H2S 2H3'
-      },
-      {
-          'id':'org2',
-          'label': 'CANA',
-          'phone': '5143820735',
-          'address': '10780 Rue Laverdure, Montréal, QC H3L 2L9'
-      },
-      {
-          'id':'org3',
-          'label': "Comité d'aide aux réfugiés",
-          'phone': '5142726060',
-          'address': '518 Rue Beaubien E, Montreal, QC H2S 1S5'
-      }
+              'id':'org1',
+              'label': "Abri d'Espoir - Armée du Salut",
+              'phone': '5149345615',
+              'address': '2000 Notre-Dame St W, Montreal, QC H3J 1M8'
+          },
+          {
+              'id':'org2',
+              'label': 'Logifem',
+              'phone': '5149393172',
+              'address': '2235 St Jacques,  Montreal,  QC H3J 1H6'
+          },
+          {
+              'id':'org3',
+              'label': "La Dauphinelle",
+              'phone': '5145980155',
+              'address': ''
+          }
     ]
 
   constructor(public navCtrl: NavController, public menuCtrl:MenuController, public callNumber:CallNumber, public IAB:InAppBrowser ) {
@@ -126,7 +126,7 @@ export class ShelterForWomenAndChildPage {
 
   openMap()
   {
-    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery);
+    this.IAB.create("https://www.google.com/maps/search/?api=1&query="+this.mapQuery,'_system');
   }
 
   doYouHaveAPlaceToStay()

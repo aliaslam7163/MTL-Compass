@@ -1,6 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
+import { App } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
@@ -23,13 +24,15 @@ export class ApplyForWorkPermitPage {
   backView:boolean = true;
       menuView:boolean = false;
 
-      constructor(public navCtrl: NavController, public callNumber:CallNumber, public IAB:InAppBrowser, public menuCtrl:MenuController) {
+      constructor(public navCtrl: NavController, public callNumber:CallNumber, public IAB:InAppBrowser, public menuCtrl:MenuController, public app:App) {
       }
 
       @ViewChild(Slides) slides: Slides;
 
       ionViewWillEnter()
       {
+        console.log(this.app.getActiveNav().getActive().id);
+        console.log(this.navCtrl.canGoBack());
         this.menuView = this.slides.isBeginning();
         this.slides.lockSwipes(true);
         if(this.slides.getActiveIndex() > 0)
@@ -57,8 +60,17 @@ export class ApplyForWorkPermitPage {
 
       openMenu()
       {
-        this.menuCtrl.open();
+        console.log(this.navCtrl.canGoBack());
+        if(this.navCtrl.canGoBack())
+        {
+          this.navCtrl.pop();
+        }
+        else
+        {
+          this.menuCtrl.open();
+        }
       }
+
       slide()
       {
         this.slides.lockSwipes(false);

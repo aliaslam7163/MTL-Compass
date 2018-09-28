@@ -21,7 +21,7 @@ export class MyApp {
   rootPage:any = HomePage;
   pages: Array<{title: string, component: any, icon:string}>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl:ModalController ) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl:ModalController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -46,5 +46,10 @@ export class MyApp {
   openPage(page)
   {
     this.nav.setRoot(page.component);
+  }
+
+  restart()
+  {
+    window.location.reload();
   }
 }

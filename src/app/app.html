@@ -1,15 +1,19 @@
 <ion-menu [content]="content" persistent="true">
   <ion-header>
     <ion-toolbar>
-      <h4 id="" style="color:#000000;font-weight:300;">Principle Steps for Refugee Claimants</h4>
+      <h4 id="" padding style="color:#000000;font-weight:300;">Principle Steps for Refugee Claimants</h4>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
+    <ion-list no-lines>
       <ion-buttons>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)"  float-right color="blue" >
+      <button  class="menuBtn" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)"  float-right color="blue" padding>
         <ion-icon [name]="p.icon" item-start></ion-icon>
         {{p.title}}
+      </button>
+      <button class="menuBtn" menuClose ion-item  (click)="restart()"  float-right color="blue" >
+        <ion-icon item-start></ion-icon>
+        Restart
       </button>
     </ion-buttons>
     </ion-list>

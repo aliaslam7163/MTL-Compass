@@ -39,6 +39,7 @@ export class HomePage {
   {
 
     this.navCtrl.setRoot(DoYouHaveAPlaceToStayPage);
+    //window.location.reload();
   }
 
 }

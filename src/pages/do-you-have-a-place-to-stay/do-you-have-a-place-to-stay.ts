@@ -3,7 +3,7 @@ import { IonicPage, NavController, MenuController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-
+import { App } from 'ionic-angular';
 import { ImmigrationMedicalExamPage } from '../immigration-medical-exam/immigration-medical-exam';
 import { ShelterForWomenPage } from '../shelter-for-women/shelter-for-women';
 import { ShelterForWomenAndChildPage } from '../shelter-for-women-and-child/shelter-for-women-and-child';
@@ -27,7 +27,7 @@ export class DoYouHaveAPlaceToStayPage {
   backView:boolean = true;
   menuView:boolean = false;
 
-  constructor(public navCtrl: NavController, public callNumber:CallNumber, public IAB:InAppBrowser, public menuCtrl:MenuController) {
+  constructor(public navCtrl: NavController, public callNumber:CallNumber, public IAB:InAppBrowser, public menuCtrl:MenuController, public app:App) {
   }
 
   @ViewChild(Slides) slides: Slides;
@@ -36,6 +36,7 @@ export class DoYouHaveAPlaceToStayPage {
   {
     this.menuView = this.slides.isBeginning();
     this.slides.lockSwipes(true);
+    console.log(this.app.getActiveNav().getActive().id);
     if(this.slides.getActiveIndex() > 0)
     {
       this.backView = false;
@@ -61,7 +62,15 @@ export class DoYouHaveAPlaceToStayPage {
 
   openMenu()
   {
-    this.menuCtrl.open();
+    console.log(this.navCtrl.canGoBack());
+    if(this.navCtrl.canGoBack())
+    {
+      this.navCtrl.pop();
+    }
+    else
+    {
+      this.menuCtrl.open();
+    }
   }
   slide()
   {

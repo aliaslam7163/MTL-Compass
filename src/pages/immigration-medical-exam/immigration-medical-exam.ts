@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
+import { App } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -69,13 +70,14 @@ export class ImmigrationMedicalExamPage {
       ]
 
 constructor(public navCtrl: NavController, public menuCtrl: MenuController,
-            public callNumber: CallNumber, public IAB: InAppBrowser) {}
+            public callNumber: CallNumber, public IAB: InAppBrowser, public app:App) {}
 
 
             @ViewChild(Slides) slides:Slides;
 
             ionViewWillEnter()
             {
+
               this.menuView = this.slides.isBeginning();
               this.slides.lockSwipes(true);
 
@@ -88,6 +90,8 @@ constructor(public navCtrl: NavController, public menuCtrl: MenuController,
                 this.backView = true;
               }
             }
+
+
             slideChanged()
             {
               this.menuView = this.slides.isBeginning();
@@ -104,7 +108,15 @@ constructor(public navCtrl: NavController, public menuCtrl: MenuController,
 
             openMenu()
             {
-              this.menuCtrl.open();
+              console.log(this.navCtrl.canGoBack());
+              if(this.navCtrl.canGoBack())
+              {
+                this.navCtrl.pop();
+              }
+              else
+              {
+                this.menuCtrl.open();
+              }
             }
 
             slide()

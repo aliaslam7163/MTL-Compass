@@ -38,7 +38,7 @@ export class HomePage {
   doYouHaveAPlaceToStay()
   {
 
-    this.navCtrl.setRoot(DoYouHaveAPlaceToStayPage);
+    this.navCtrl.push(DoYouHaveAPlaceToStayPage,{},{animate:true,direction:'forward'});
     //window.location.reload();
   }
 

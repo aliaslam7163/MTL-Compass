@@ -9,8 +9,8 @@
     <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row>
         <ion-col>
-            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> Back</button>
-            <a *ngIf="menuView == true" (click)="openMenu()" id=""  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-back" style="margin-right:5px !important;" ></ion-icon>Back</a>
+            <button *ngIf="backView == false" id="doYouHaveAPlaceToStay-button59" (click)="slideBack()"   ion-button color="blue" clear float-left no-padding no-margin> BACK</button>
+            <a *ngIf="menuView == true" (click)="openMenu()" id=""  style="text-align:left;" ion-button color="blue" clear no-padding no-margin float-left small>BACK</a>
 
         </ion-col>
       </ion-row>
@@ -26,7 +26,7 @@
         </ion-row>
         <ion-row left justify-content-start>
           <ion-col >
-            <button (click)="slide()" style="width: 60% !important;text-transform:none;" ion-button icon-left round float-right>
+            <button (click)="slide()" style="width: 60% !important;text-transform:none;background-color:#0072BC !important;color:white;" ion-button icon-left round float-right>
               <ion-icon  name="help" md="md-help" item-start ></ion-icon>
               Ask
             </button>
@@ -39,7 +39,7 @@
     <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row>
         <ion-col >
-          <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
+          <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small>BACK</button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -58,7 +58,7 @@
           <span></span>
           <ion-textarea no-padding placeholder="How can I enroll my children in school?" [(ngModel)]="question" name="question" style="border-width:1px;border-style:solid;border-color:#ddd;border-right:0px !important; border-left:0px !important;color:#444;"></ion-textarea>
         </ion-item>
-        <button style="width: 60% !important;text-transform:none;" type="submit" (click)="slide()" ion-button round outline float-right icon-left>
+        <button style="width: 60% !important;text-transform:none;color:#0072BC;" type="submit" (click)="slide()" ion-button round outline float-right icon-left>
           Next
         </button>
       </form>
@@ -69,7 +69,7 @@
     <div class="Absolute-Center" style="max-width: 375px; width:100%; margin: auto; text-align: center;">
       <ion-row left justify-content-start>
         <ion-col >
-          <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small><ion-icon name="arrow-up" style="margin-right:5px !important;"></ion-icon> Back</button>
+          <button id="" (click)="slideBack()" style="text-align:left;text-transform:none;" ion-button color="blue" clear no-padding no-margin float-left small> BACK</button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -89,7 +89,7 @@
               <ion-label>Email</ion-label>
               <ion-input full type="text" [(ngModel)]="emailAddr" name="title"></ion-input>
             </ion-item>
-            <button  type="submit"  ion-button full block icon-left>
+            <button  type="submit"  ion-button full block icon-left style="background-color:#0072BC !important;color:white;">
               <ion-icon ios="ios-send-outline" md="md-send"></ion-icon>
               Ask Question
             </button>

@@ -50,6 +50,7 @@ export class MyApp {
 
   restart()
   {
-    window.location.reload();
+    //window.location.reload();
+    this.nav.goToRoot();
   }
 }
